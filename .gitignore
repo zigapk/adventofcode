@@ -142,7 +142,3 @@ fabric.properties
 # modules.xml
 # .idea/misc.xml
 # *.ipr
-
-
-#test input files
-*.input
