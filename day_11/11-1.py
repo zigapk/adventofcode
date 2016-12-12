@@ -69,7 +69,7 @@ previous_depth = 0
 while len(states) > 0:
     elevator, moves_till_now, state = states.pop(0)  # pop front
     if moves_till_now > previous_depth:
-        print("entered new depth:", moves_till_now)
+        print("entered depth", moves_till_now)
         previous_depth = moves_till_now
 
     if is_result(state):
