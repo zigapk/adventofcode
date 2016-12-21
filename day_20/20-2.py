@@ -8,6 +8,7 @@ for line in fileinput.input():
 ranges.sort()
 
 i = 0
+counter = 0
 while i <= 4294967295:
     dela = True
     for j in range(len(ranges)):
@@ -17,6 +18,7 @@ while i <= 4294967295:
             dela = False
             break
     if dela:
-        print(i)
-        break
+        counter += 1
     i += 1
+
+print(counter)
