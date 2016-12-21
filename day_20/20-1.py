@@ -1,5 +1,4 @@
 import fileinput
-import time
 
 ranges = []
 for line in fileinput.input():
