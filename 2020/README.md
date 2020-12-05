@@ -8,7 +8,7 @@ My solutions for [Advent of Code 2020](https://adventofcode.com/2020/).
 | Day 2  | Password Philosophy         | 🎄️ |
 | Day 3  | Toboggan Trajectory         | 🎄️ |
 | Day 4  | Passport Processing         | 🎄 |
-| Day 5  | ?                           | ❄️ |
+| Day 5  | Binary Boarding             | 🎄️ |
 | Day 6  | ?                           | ❄️ |
 | Day 7  | ?                           | ❄️ |
 | Day 8  | ?                           | ❄️ |
