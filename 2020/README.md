@@ -21,7 +21,7 @@ My solutions for [Advent of Code 2020](https://adventofcode.com/2020/).
 | Day 15 | Rambunctious Recitation     | 🎄 |
 | Day 16 | Ticket Translation          | 🎄 |
 | Day 17 | Conway Cubes                | 🎄 |
-| Day 18 | ?                           | ❄️ |
+| Day 18 | Operation Order             | 🎄️ |
 | Day 19 | ?                           | ❄️ |
 | Day 20 | ?                           | ❄️ |
 | Day 21 | ?                           | ❄️ |

@@ -1,70 +1,60 @@
-class Plus:
-    def __init__(self, s):
-        self.s = s
-        self.nested = False
-        try:
-            self.val = int(s)
-            self.operator = None
-            self.left = None
-            self.right = None
-        except Exception:
-            self.val = None
+def is_wrapped(s):
+    depth = 0
+    for i in range(len(s)):
+        c = s[i]
 
-            operator_index = None
-            while operator_index is None:
-                operator_index = self.find_last_not_nested_operator_index()
-                if operator_index is None:
-                    self.s = self.s[1:-1]
-                    self.nested = True
+        if c == '(':
+            depth += 1
+        elif c == ')':
+            depth -= 1
 
-            self.operator = self.s[operator_index]
-            self.left = Plus(self.s[:operator_index])
-            self.right = Plus(self.s[operator_index + 1:])
+        if depth == 0 and i != 0 and i != len(s) - 1:
+            return False
 
-    def find_last_not_nested_operator_index(self):
-        depth = 0
-        for i in range(len(self.s) - 1, -1, -1):
-            c = self.s[i]
+    return True
 
-            if c == '(':
-                depth += 1
-            elif c == ')':
-                depth -= 1
-            elif (c == '+') and depth == 0:
-                return i
 
-        return None
+def find_sign_not_nested(s, sign):
+    depth = 0
+    for i in range(len(s)):
+        c = s[i]
 
-    def to_string(self):
-        if self.val is not None:
-            return str(self.val)
-        else:
-            res = '(' + self.left.to_string() + '+' + self.right.to_string() + ')'
-            
-            return res
-            
-            # def value(self):
-    #     if self.val is not None:
-    #         # print(self.s, '=', self.val)
-    #         return self.val
-    #     if self.operator == '+':
-    #         self.val = self.left.value() + self.right.value()
-    #         # print(self.s, '=', self.val)
-    #         return self.val
-    #     elif self.operator == '*':
-    #         self.val = self.left.value() * self.right.value()
-    #         # print(self.s, '=', self.val)
-    #         return self.val
-    #     raise
+        if c == '(':
+            depth += 1
+        elif c == ')':
+            depth -= 1
+
+        if c == sign and depth == 0:
+            return i
+
+    return None
+
+
+def calculate(s):
+    try:
+        return int(s)
+    except Exception:
+        pass
+
+    if is_wrapped(s):
+        return calculate(s[1:-1])
+
+    times_index = find_sign_not_nested(s, '*')
+
+    if times_index is not None:
+        return calculate(s[:times_index]) * calculate(s[times_index + 1:])
+
+    plus_index = find_sign_not_nested(s, '+')
+    return calculate(s[:plus_index]) + calculate(s[plus_index + 1:])
 
 
 result = 0
-with open('sample', 'r') as f:
+with open('in', 'r') as f:
     for line in f.readlines():
         a = line.strip().replace(' ', '')
-        current = eval(Plus(a).to_string())
 
-        print(current)
+        current = calculate(a)
+
         result += current
 
 print(result)
