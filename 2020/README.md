@@ -24,7 +24,7 @@ My solutions for [Advent of Code 2020](https://adventofcode.com/2020/).
 | Day 18 | Operation Order             | 🎄️ |
 | Day 19 | Monster Messages            | 🎄 |
 | Day 20 | Jurassic Jigsaw             | 🎄 |
-| Day 21 | ?                           | ❄️ |
+| Day 21 | Allergen Assessment         | 🎄 |
 | Day 22 | ?                           | ❄️ |
 | Day 23 | ?                           | ❄️ |
 | Day 24 | ?                           | ❄️ |
