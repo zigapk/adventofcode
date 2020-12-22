@@ -25,7 +25,7 @@ My solutions for [Advent of Code 2020](https://adventofcode.com/2020/).
 | Day 19 | Monster Messages            | 🎄 |
 | Day 20 | Jurassic Jigsaw             | 🎄 |
 | Day 21 | Allergen Assessment         | 🎄 |
-| Day 22 | ?                           | ❄️ |
+| Day 22 | Crab Combat                 | 🎄 |
 | Day 23 | ?                           | ❄️ |
 | Day 24 | ?                           | ❄️ |
 | Day 25 | ?                           | ❄️ |
